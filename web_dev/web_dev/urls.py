@@ -20,6 +20,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/', include('hello.urls')),
     path('isitnewyear/',include('newyear.urls')),
-    path('tasks/',include('tasks.urls'))
+    path('tasks/',include('tasks.urls')),
+    path('flight/',include('flight.urls'))
 ]
 
