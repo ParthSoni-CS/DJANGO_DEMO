@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import flight
+from .models import flight,passengers
 
 # Create your views here.
 def index(request):
@@ -10,5 +10,6 @@ def index(request):
 def flight_det(request,flight_id):
     flight_details = flight.objects.get(pk = flight_id)
     return render(request, "flight/flight_det.html",{
-        "flight_det":flight_details
+        "flight_det": flight_details,
+        "passengers": flight_details.passengers.all()
     })

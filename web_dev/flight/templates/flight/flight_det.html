@@ -9,4 +9,14 @@
             <li>duration:{{ flight_det.duration}}</li>
         </ul>
     </h1>
+    <h1>
+        Passengers
+        <ul>
+            {% for passenger in passengers %}
+                <li>{{ passenger.first_name }} {{ passenger.last_name }}</li>
+            {% empty %}
+                <li>No passenger</li>
+            {% endfor %}
+        </ul>
+    </h1>
 {% endblock %}
